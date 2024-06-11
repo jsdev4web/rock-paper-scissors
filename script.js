@@ -26,7 +26,7 @@ let rounds = 0;
 
 
 function playRound(humanChoice, computerChoice){
-    humanChoice = getHumanChoice().toLowerCase();
+    //humanChoice = getHumanChoice().toLowerCase();
 
     computerChoice = getComputerChoice();
 
@@ -73,8 +73,28 @@ function winner(){
     }
 }
 
+//playRound()
 
-function playGame(){
+//paper button
+let paperBtn = document.getElementById("button1");
+
+paperBtn.addEventListener("click", () => {
+    playRound(humanChoice="paper")
+})
+
+let scissorBtn = document.getElementById("button2");
+
+scissorBtn.addEventListener("click", () => {
+    playRound(humanChoice="scissors")
+})
+
+let rockBtn = document.getElementById("button3")
+
+rockBtn.addEventListener("click", () => {
+    playRound(humanChoice="rock")
+})
+
+/* function playGame(){
 
     console.log(rounds);
 
@@ -91,4 +111,4 @@ function playGame(){
 
 //playRound();
 
-playGame()
+playGame() */
