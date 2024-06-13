@@ -71,6 +71,7 @@ function winner(){
     else{
         return "computer wins"
     }
+    
 }
 
 //playRound()
@@ -79,20 +80,101 @@ function winner(){
 let paperBtn = document.getElementById("button1");
 
 paperBtn.addEventListener("click", () => {
+    if (humanScore === 5){
+        alert("you win")
+        return 
+    } else if( computerScore === 5){
+        alert("you lose")
+        return 
+    } else{
+
     playRound(humanChoice="paper")
+    selections(humanChoice="paper")
+    updateScore()
+    }
 })
 
 let scissorBtn = document.getElementById("button2");
 
 scissorBtn.addEventListener("click", () => {
+    if (humanScore === 5){
+        alert("you win")
+        return 
+    } else if( computerScore === 5){
+        alert("you lose")
+        return 
+    } else{
     playRound(humanChoice="scissors")
+    selections(humanChoice="scissors")
+    updateScore()
+    }
+    
 })
 
 let rockBtn = document.getElementById("button3")
 
 rockBtn.addEventListener("click", () => {
+    if (humanScore === 5){
+        alert("you win")
+        return 
+    } else if( computerScore === 5){
+        alert("you lose")
+        return 
+    } else {
     playRound(humanChoice="rock")
+    selections(humanChoice="rock")
+    updateScore()
+    }
+    
 })
+
+
+function updateScore(){
+    let html = "";
+    html += 
+    `human score: ${humanScore}
+     cpu score: ${computerScore}`;
+
+    let scoreRounds = document.querySelector(".scoreRounds");
+    //console.log(scoreRounds);
+    scoreRounds.innerHTML = html;
+}
+
+function selections(humanChoice, computerChoice){
+    computerChoice = getComputerChoice();
+    //console.log(computerChoice)
+    //console.log(humanChoice)
+    let html = "";
+    html +=
+    `Current Round <br> Player: ${humanChoice} CPU: ${computerChoice}`;
+
+    let choices = document.querySelector(".choices");
+    //console.log(choices)
+    choices.innerHTML = html;
+    
+}
+
+let resetbtn = document.getElementById("reset")
+
+function reset(humanScore, computerScore){
+    humanScore = 0;
+    computerScore = 0;
+    
+}
+
+resetbtn.addEventListener("click", () => {
+    let scoreRounds = document.querySelector(".scoreRounds");
+    let choices = document.querySelector(".choices");
+
+    scoreRounds.innerHTML = ""
+    choices.innerHTML = ""
+
+    humanScore = 0;
+    computerScore = 0;
+    
+})
+
+
 
 /* function playGame(){
 

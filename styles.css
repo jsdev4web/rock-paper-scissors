@@ -1,0 +1,69 @@
+
+h2{
+    color: white;
+}
+
+p {
+    color: wheat;
+    font-size: x-large;
+}
+
+#main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 770px;
+    padding-top: 25px;
+    background-color: rgb(56, 90, 165);
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#button1 {
+    border-radius: 10px;
+    background-color: yellow;
+}
+
+#button2 {
+    border-radius: 10px;
+    background-color: red;
+}
+
+#button3 {
+    border-radius: 10px;
+    background-color: pink;
+}
+
+.scoreRounds {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+
+}
+
+.choices {
+    font-size: 30px;
+    color: white;
+    font-weight: 600;
+}
+
+.scoreRounds {
+    margin-top: 30px;
+}
+
+.choices {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+#reset {
+    background-color: white;
+    border-radius: 10px;
+    width: 200px;
+}
+
